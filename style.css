@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("oceanbackground.jpg");
+  overflow: hidden;
+}
+
+/*Ticket Display*/
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  background-color: #51cde9;
+  font-size: 50px;
+}
+
+#tableItems {
+  position: absolute;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 100px;
+  visibility: var(--ticketDisplayVisibility, visible);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+
+  margin-bottom: 20px;
+  font-size: xx-large;
+  max-width: max-content;
+}
+
+td,
+th {
+  border: 3px solid #999999;
+  text-align: left;
+  padding: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:hover {
+  opacity: 60%;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: xx-large;
+  background-color: #dddddd;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 60%;
+}
+
+/*New Ticket Input*/
+#ticketForm {
+  position: absolute;
+  visibility: var(--ticketCreationVisibility, hidden);
+  margin-top: 100px;
+  padding-left: 30%;
+  padding-right: 25%;
+}
+
+#customerName {
+  font-size: xx-large;
+}
+
+#subject {
+  font-size: xx-large;
+}
+
+#details {
+  font-size: large;
+}
+
+/*Ticket Edit*/
+#ticketFormEdit {
+  position: absolute;
+  visibility: var(--ticketCreationVisibilityEdit, hidden);
+  margin-top: 100px;
+  padding-left: 30%;
+  padding-right: 25%;
+}
+
+#customerNameEdit {
+  font-size: xx-large;
+}
+
+#subjectEdit {
+  font-size: xx-large;
+}
+
+#detailsEdit {
+  font-size: large;
+}

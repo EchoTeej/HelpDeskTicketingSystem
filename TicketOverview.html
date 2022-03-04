@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Ticket Display</title>
+  </head>
+  <!--Ticket Display-->
+  <body onload="displayTickets()">
+    <h1>Help Desk Ticket System</h1>
+    <div id="tableItems">
+      <table id="listItems" onclick="viewTicket(event)">
+        <tr>
+          <th style="width: 30%">Customer Name</th>
+          <th>Subject</th>
+        </tr>
+      </table>
+      <span class="btn" onclick="newTicket()">Add Ticket</span>
+    </div>
+    <!--New Ticket Input-->
+    <form id="ticketForm" action="/action_page.php">
+      <input
+        type="text"
+        id="customerName"
+        name="customerName"
+        placeholder="Customer Name"
+      /><br /><br />
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Subject"
+      /><br /><br />
+      <textarea
+        id="details"
+        placeholder="Enter Details..."
+        rows="20"
+        cols="100"
+      ></textarea>
+      <br /><br />
+      <span class="btn" onclick="addTicket()">Add</span>
+      <span class="btn" onclick="cancelBtn()"> Cancel</span>
+    </form>
+
+    <!--Ticket Edit-->
+    <form id="ticketFormEdit" action="/action_page.php">
+      <input
+        type="text"
+        id="customerNameEdit"
+        name="customerName"
+        placeholder="Customer Name"
+      /><br /><br />
+      <input
+        type="text"
+        id="subjectEdit"
+        name="subject"
+        placeholder="Subject"
+      /><br /><br />
+      <textarea
+        id="detailsEdit"
+        placeholder="Enter Details..."
+        rows="20"
+        cols="100"
+      ></textarea>
+      <br /><br />
+      <span class="btn" onclick="addTicketEdit()">Add</span>
+      <span class="btn" onclick="cancelBtnEdit()"> Cancel</span>
+      <span class="btn" onclick="deleteBtnEdit()">Delete</span>
+    </form>
+  </body>
+</html>
